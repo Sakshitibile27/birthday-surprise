@@ -1,0 +1,57 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#070309;color:#f8e8c8;font-family:Arial,sans-serif}
+body{background:radial-gradient(circle at 50% 45%,#1c0b15 0,#08040a 60%,#030206 100%)}
+.page{position:absolute;inset:0;display:none;overflow:hidden}.page.active{display:block;animation:pageIn .7s ease}
+.page:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 25%,#ffd44b22 0 4px,transparent 5px),radial-gradient(circle at 75% 35%,#ffd44b22 0 5px,transparent 6px);background-size:210px 190px;animation:bgFloat 9s linear infinite}
+@keyframes pageIn{from{opacity:0;transform:scale(1.02)}to{opacity:1;transform:none}}@keyframes bgFloat{to{background-position:0 -190px}}
+#stars span{position:fixed;border-radius:50%;background:#ffd84c;box-shadow:0 0 12px #ffd84c;z-index:0;animation:star 3s ease-in-out infinite alternate}@keyframes star{to{transform:translateY(-20px);opacity:.2}}
+.center,.memoryPage,.letterPage{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:25px 18px}
+h1{margin:0 0 12px;color:#ffd84d;font-size:clamp(32px,7vw,60px);line-height:1.05;text-shadow:0 0 20px #e4a92033}
+h2{color:#ffd84d;font-size:32px;margin:10px}h3{color:#d9bb81;font-weight:500;margin:5px}
+p{color:#d6b77f}.eyebrow{color:#e8b96d;font-size:16px}.btn{background:#100711;color:#ffe49a;border:1px solid #e3b936;border-radius:30px;padding:13px 28px;font-weight:bold;font-size:16px;margin:12px 5px;box-shadow:0 0 20px #f0b52a22;cursor:pointer}.hidden{display:none!important}
+.giftScene{width:330px;height:360px;position:relative;cursor:pointer;margin:5px}.giftGlow{position:absolute;inset:70px 25px 20px;border-radius:50%;background:#ff209c44;filter:blur(38px);animation:glow 1.8s infinite alternate}@keyframes glow{to{transform:scale(1.12);opacity:.7}}
+.giftBox{position:absolute;left:45px;bottom:38px;width:240px;height:190px;filter:drop-shadow(0 20px 25px #000)}
+.giftBody{position:absolute;bottom:0;width:100%;height:145px;background:linear-gradient(135deg,#ff42a5,#bd126d);border-radius:12px 12px 25px 25px;box-shadow:inset 0 0 25px #ff8fc944}
+.giftBody span{position:absolute;left:106px;top:0;width:30px;height:100%;background:linear-gradient(#ffd84d,#f5b52d)}
+.giftLid{position:absolute;z-index:4;left:-10px;top:-25px;width:260px;height:55px;border-radius:12px;background:linear-gradient(#ff63b5,#df2383);box-shadow:0 5px 10px #0005;transform-origin:center bottom}
+.bow{position:absolute;left:100px;top:-34px}.bow i{display:block;position:absolute;width:48px;height:35px;border:8px solid #ffd84d;border-radius:60% 40% 60% 40%;background:#f5b52d}.bow i:first-child{transform:rotate(-35deg);left:-30px}.bow i:nth-child(2){transform:rotate(35deg);left:4px}.bow b{display:block;position:absolute;width:22px;height:22px;background:#ffd84d;border-radius:50%;left:-2px;top:6px}
+.floatingHeart{position:absolute;z-index:5;left:125px;top:50px;font-size:72px;filter:drop-shadow(0 0 18px #ff39a4);animation:heart 1.6s ease-in-out infinite}@keyframes heart{50%{transform:translateY(-12px) scale(1.08)}}
+.giftSpark{position:absolute;color:#ffd84d;font-size:30px;opacity:.6;animation:spark 1.5s ease-in-out infinite}.giftSpark.a{left:25px;top:85px}.giftSpark.b{right:25px;top:130px;animation-delay:.5s}.giftSpark.c{right:60px;top:35px;animation-delay:1s}@keyframes spark{50%{transform:scale(1.5) rotate(25deg);opacity:1}}
+.giftScene.opening .giftLid{animation:lidOpen 1.1s forwards}.giftScene.opening .floatingHeart{animation:heartOut 1.2s forwards}.giftScene.opening{animation:giftOpen .8s}@keyframes lidOpen{to{transform:translateY(-115px) rotate(-8deg)}}@keyframes heartOut{to{transform:translateY(-105px) scale(1.3);opacity:0}}@keyframes giftOpen{50%{transform:scale(1.06) rotate(-1deg)}}
+.lockIcon{font-size:70px}.passBox{display:flex;border:1px solid #a87b27;border-radius:30px;overflow:hidden;background:#0d0710;margin:15px 0}.passBox input{background:transparent;border:0;outline:0;padding:13px 18px;color:#fff;width:220px}.passBox button{border:0;background:#dcae38;color:#170c0c;padding:0 22px;font-weight:bold}.msg{color:#e9b95c;min-height:22px}
+.counter{display:grid;grid-template-columns:1fr 1fr;gap:14px 55px;margin:12px}.counter b{display:block;color:#ffd84d;font-size:clamp(28px,6vw,44px)}.counter small{letter-spacing:2px;color:#c6a66c}
+.cake{width:330px;height:235px;position:relative;margin:0}.tier{position:absolute;border-radius:18px;background:linear-gradient(#ffabd8,#ec579f);box-shadow:0 8px #a72b6b}.tier.bottom{width:285px;height:105px;left:22px;bottom:5px}.tier.top{width:185px;height:75px;left:72px;bottom:96px}
+.numberCandle{position:absolute;z-index:4;width:50px;height:68px;background:#ff9ed0;border-radius:9px;color:#b52070;font-size:30px;font-weight:bold;padding-top:15px;cursor:pointer;bottom:164px}.n2{left:108px}.n1{right:108px}.flame,.sideCandle i{position:absolute;left:14px;top:-29px;width:21px;height:30px;background:#ffd74b;border-radius:60% 40% 60% 40%;box-shadow:0 0 18px #ffae00;animation:flick .12s infinite alternate}@keyframes flick{to{transform:scale(.8) rotate(5deg)}}.flame.out,.sideCandle i.out{animation:out .7s forwards}@keyframes out{to{opacity:0;transform:translate(45px,-20px) scale(.1)}}.sideCandle{position:absolute;bottom:167px;width:11px;height:57px;background:#fff0f6;z-index:3}.sc1{left:93px}.sc2{right:93px}.sideCandle i{left:0;top:-20px;width:12px;height:19px}
+#candleMsg{font-size:13px}.memoryPage{justify-content:center}.memoryPage h1{font-size:38px}.memoryCard{width:min(430px,82vw);background:#fff9ec;padding:12px 12px 18px;transform:rotate(-2deg);box-shadow:0 20px 45px #000;cursor:pointer}.memoryCard img{width:100%;height:min(57vh,500px);object-fit:cover;display:block}.caption{color:#382b27;font:22px cursive;padding-top:10px}.dots{color:#e5b53e;margin:10px}
+.balloons{height:260px;width:min(600px,90vw);display:flex;align-items:end;justify-content:center;gap:16px}.balloon{width:70px;height:100px;border-radius:50% 50% 48% 48%;position:relative;cursor:pointer;box-shadow:inset 14px 10px 16px #fff5,0 0 20px #ffffff15;animation:balloonFloat 2s ease-in-out infinite alternate}.balloon:after{content:"";position:absolute;left:34px;bottom:-55px;height:58px;border-left:2px solid #aaa}.balloon.pop{animation:pop .4s forwards}@keyframes balloonFloat{to{transform:translateY(-10px)}}@keyframes pop{to{transform:scale(1.5);opacity:0}}.wishBox{min-height:65px;width:min(560px,88vw);padding:17px;border:1px solid #74405c;border-radius:18px;color:#f5e0b6;background:#321020;margin:20px 0}
+.puzzle{width:min(330px,80vw);height:min(330px,80vw);display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border:4px solid #ffd34d;border-radius:18px;overflow:hidden;box-shadow:0 0 25px #ffd34d22}.piece{background-image:url("assets/photos/bestfriend.jpg");background-size:300% 300%;cursor:pointer}.piece.selected{outline:4px solid #fff}.piece.locked{cursor:default}
+.scratch{width:min(390px,82vw);height:min(500px,58vh);position:relative;overflow:hidden;border-radius:20px;border:2px solid #ffd34d;box-shadow:0 0 30px #d536ff33;background:#230d18}.scratch img{width:100%;height:100%;object-fit:cover}.scratchRevealText{position:absolute;bottom:0;left:0;right:0;background:#130811dd;color:#ffe5a1;padding:15px;font-size:20px;font-weight:bold}.scratchRevealText small{font-size:13px;font-weight:normal}.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.letterPage{justify-content:flex-start;padding-top:45px}.envelope{width:min(500px,82vw);height:300px;background:#d9a15b;position:relative;border-radius:15px;cursor:pointer;box-shadow:0 20px 50px #000;margin:25px}.flap{position:absolute;inset:0;background:#f8efdc;clip-path:polygon(0 0,50% 58%,100% 0,100% 45%,50% 83%,0 45%);z-index:2}.paperIcon{position:absolute;z-index:3;left:calc(50% - 35px);top:110px;background:#df1e76;color:#fff;border-radius:50%;width:70px;height:70px;display:flex;align-items:center;justify-content:center;font-size:32px}.envelope.open{animation:env .8s}@keyframes env{50%{transform:scale(1.03)}to{transform:scale(1)}}.letterPaper{width:min(650px,92vw);height:58vh;overflow:auto;background:linear-gradient(#fff8e6,#f5e3c0);color:#4b3524;padding:25px;border-radius:4px;text-align:left;box-shadow:0 15px 50px #000;font:italic 18px/1.8 Georgia}.finalBear{font-size:80px}.final p{max-width:600px;font-size:20px}.heartRain{font-size:28px;margin:20px;animation:heartRain 2s infinite alternate}@keyframes heartRain{to{transform:translateY(-12px) scale(1.05)}}
+@media(max-width:520px){.giftScene{transform:scale(.85);margin:-10px}.counter{gap:12px 28px}.counter b{font-size:27px}.cake{transform:scale(.85);margin:-15px}.balloon{width:54px;height:80px}.balloons{gap:9px}.memoryCard img{height:48vh}}
+
+/* v5 memory gallery: show every supplied photo completely */
+.memoryCard{width:min(460px,88vw);background:#fff9ec;padding:12px 12px 18px;transform:rotate(-2deg);box-shadow:0 20px 45px #000;cursor:pointer}
+.memoryPhotoFrame{width:100%;height:min(58vh,510px);display:flex;align-items:center;justify-content:center;background:#eee5d6;overflow:hidden}
+.memoryPhotoFrame img{width:100%;height:100%;object-fit:contain;display:block;transition:opacity .35s,transform .35s}
+.memoryPhotoFrame img.memoryChanging{animation:memoryPhotoIn .55s ease}
+@keyframes memoryPhotoIn{from{opacity:0;transform:scale(.94) translateX(18px)}to{opacity:1;transform:scale(1) translateX(0)}}
+#memoryCaption{min-height:30px}
+.puzzle .piece{background-repeat:no-repeat}
+@media(max-width:520px){.memoryPhotoFrame{height:52vh}}
+
+/* v6: Best Friend photo is reserved exclusively for the Scratch Card */
+.scratchReveal img,
+.scratch-card img,
+#scratchImage{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  display:block;
+  margin:auto;
+}
+.scratchPhotoReveal{
+  animation:scratchPhotoReveal .8s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes scratchPhotoReveal{
+  0%{opacity:0;transform:scale(.88) rotate(-2deg)}
+  65%{opacity:1;transform:scale(1.03) rotate(.5deg)}
+  100%{opacity:1;transform:scale(1) rotate(0)}
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>For Banashankari 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars"></div>
+
+<!-- 1 GIFT -->
+<section class="page active" id="p1">
+  <div class="center">
+    <div class="eyebrow">✨ Something special, just for you ✨</div>
+    <h1>A surprise awaits you</h1>
+    <div class="giftScene" id="giftScene" onclick="openGift()">
+      <div class="giftGlow"></div>
+      <div class="floatingHeart">💖</div>
+      <div class="giftBox">
+        <div class="giftLid"><div class="bow"><i></i><i></i><b></b></div></div>
+        <div class="giftBody"><span></span></div>
+      </div>
+      <div class="giftSpark a">✦</div><div class="giftSpark b">✧</div><div class="giftSpark c">✦</div>
+    </div>
+    <p id="giftText">Tap the gift to open 🎁</p>
+    <button class="btn hidden" id="giftNext" onclick="nextPage('p2',event)">Continue ✨</button>
+  </div>
+</section>
+
+<!-- 2 PASSWORD -->
+<section class="page" id="p2">
+ <div class="center">
+  <div class="lockIcon">🔐</div>
+  <h2>Something is locked…</h2>
+  <p>Enter the secret password to continue</p>
+  <div class="passBox"><input id="password" type="password" placeholder="Enter password"><button onclick="checkPassword()">Unlock</button></div>
+  <p id="passMsg" class="msg"></p>
+ </div>
+</section>
+
+<!-- 3 BIRTHDAY -->
+<section class="page" id="p3">
+ <div class="center">
+  <h1>Happy Birthday<br>Banashankari 🎂</h1>
+  <h3>The World Has Been Better Since ❤️</h3>
+  <div class="counter">
+   <div><b>21</b><small>YEARS</small></div><div><b>7,669</b><small>DAYS</small></div>
+   <div><b>1,84,074</b><small>HOURS</small></div><div><b>1,10,44,470</b><small>MINUTES</small></div>
+  </div>
+  <div class="cake">
+    <div class="sideCandle sc1"><i></i></div><div class="sideCandle sc2"><i></i></div>
+    <div class="numberCandle n2" onclick="blowCandle()">2<div class="flame"></div></div>
+    <div class="numberCandle n1" onclick="blowCandle()">1<div class="flame"></div></div>
+    <div class="tier top"></div><div class="tier bottom"></div>
+  </div>
+  <button class="btn" id="blowBtn" onclick="startMic()">🎤 Blow with your breath</button>
+  <p id="candleMsg">Or tap a candle if microphone is unavailable 💨</p>
+  <button class="btn hidden" id="cakeNext" onclick="nextPage('p4')">Continue to Memories ✨ ✨</button>
+ </div>
+</section>
+
+<!-- 4 MEMORIES -->
+<section class="page" id="p4">
+ <div class="memoryPage">
+  <h1>Cute Memories 💕</h1>
+  <div class="memoryCard" id="memoryCard">
+   <div class="memoryPhotoFrame">
+    <img id="memoryImage" src="assets/photos/her1.jpg" alt="Memory photo">
+   </div>
+   <div class="caption" id="memoryCaption">A lovely memory ✨</div>
+  </div>
+  <div class="dots" id="memoryDots">● ○ ○ ○ ○ ○</div>
+  <p>← swipe or tap the photo →</p>
+  <button class="btn" id="memoryNextPhoto" onclick="nextMemory()">Next Memory</button>
+  <button class="btn hidden" id="memoryNext" onclick="nextPage('p5')">Next Surprise 🎁</button>
+ </div>
+</section>
+
+<!-- 5 BALLOONS -->
+<section class="page" id="p5">
+ <div class="center">
+  <h1>Pop the Wishes 🎈</h1><p>Tap each balloon to reveal a little wish</p>
+  <div class="balloons" id="balloons"></div>
+  <div class="wishBox" id="wishBox">Tap a balloon 💫</div>
+  <div id="balloonCount">Popped 0/5</div>
+  <button class="btn hidden" id="balloonNext" onclick="nextPage('p6')">Continue ✨</button>
+ </div>
+</section>
+
+<!-- 6 PUZZLE -->
+<section class="page" id="p6">
+ <div class="center">
+  <h1>Birthday Puzzle 🎂</h1><p>Solve the puzzle to unlock a special message ✨</p>
+  <div class="puzzle" id="puzzle"></div>
+  <div id="puzzleMsg" class="msg">Arrange her photo correctly 🧩</div>
+  <button class="btn hidden" id="puzzleNext" onclick="nextPage('p7')">One Last Surprise ✨</button>
+ </div>
+</section>
+
+<!-- 7 SCRATCH -->
+<section class="page" id="p7">
+ <div class="center">
+  <h1>One Last Surprise ✨</h1><p>Scratch the golden card to reveal it</p>
+  <div class="scratch">
+    <img src="assets/photos/bestfriend_scratch.jpg">
+    <div class="scratchRevealText">Some friendships never fade… 💕<br><small>Years may pass, but our friendship will always remain special.</small></div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+  <p id="scratchHint">Scratch here 🪙<br><small>drag your finger across the card</small></p>
+  <button class="btn hidden" id="scratchNext" onclick="nextPage('p8')">Open the Letter 💌</button>
+ </div>
+</section>
+
+<!-- 8 LETTER -->
+<section class="page" id="p8">
+ <div class="letterPage">
+  <h1>A Letter From Your Friend Sakshi 💌</h1>
+  <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="flap"></div><div class="paperIcon">♥</div>
+  </div>
+  <p id="letterHint">Tap to open 💌</p>
+  <div class="letterPaper hidden" id="letterPaper"><div id="letterText"></div></div>
+  <button class="btn hidden" id="finalNext" onclick="nextPage('p9')">Continue ✨</button>
+ </div>
+</section>
+
+<!-- 9 FINAL -->
+<section class="page" id="p9">
+ <div class="center final">
+  <div class="finalBear">🧸</div>
+  <h1>“Some friendships never fade…”</h1>
+  <p>Even after years apart, you’re still one of the most special people in my life.</p>
+  <h2>Happy Birthday, Banashankari! 🎂</h2>
+  <div class="heartRain">💖 ✨ 💕 ✨ 💖</div>
+  <button class="btn" onclick="location.reload()">↻ Watch it again</button>
+ </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
