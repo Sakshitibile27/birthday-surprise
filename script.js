@@ -60,7 +60,7 @@ Years may pass, life may change, and we may not always be together like we used 
 
 Keep smiling, keep shining, and keep being the amazing person you are. ✨
 
-Happy Birthday once again! 🎂❤️
+
 
 With lots of love and warm wishes,
 Your Friend, Sakshi 
