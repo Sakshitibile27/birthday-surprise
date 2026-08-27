@@ -63,7 +63,8 @@ Keep smiling, keep shining, and keep being the amazing person you are. ✨
 
 
 With lots of love and warm wishes,
-Your Friend, Sakshi 
+Your Friend, 
+Sakshi  
 Happy Birthday once again! ✨`;
 let opened=false;function openLetter(){if(opened)return;opened=true;$("#envelope").classList.add("open");setTimeout(()=>{$("#envelope").classList.add("hidden");$("#letterHint").classList.add("hidden");$("#letterPaper").classList.remove("hidden");typeLetter()},900)}
 function typeLetter(){let i=0,e=$("#letterText"),t=setInterval(()=>{e.textContent+=letter[i++];e.parentElement.scrollTop=e.parentElement.scrollHeight;if(i>=letter.length){clearInterval(t);$("#finalNext").classList.remove("hidden")}},18)}
