@@ -48,16 +48,22 @@ function swapTile(i){
 let scInit=false,scCount=0,down=false;function initScratch(){if(scInit)return;scInit=true;let c=$("#scratchCanvas"),r=c.getBoundingClientRect(),d=devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;let x=c.getContext("2d");x.scale(d,d);x.fillStyle="#d8a936";x.fillRect(0,0,r.width,r.height);x.fillStyle="#c6a04b";for(let i=0;i<50;i++){x.beginPath();x.arc(Math.random()*r.width,Math.random()*r.height,Math.random()*3,0,7);x.fill()}x.fillStyle="#fff";x.font="bold 25px Arial";x.textAlign="center";x.fillText("Scratch here 🪙",r.width/2,r.height/2);x.font="14px Arial";x.fillText("drag your finger across the card",r.width/2,r.height/2+28);function er(e){if(!down)return;let p=e.touches?e.touches[0]:e,rr=c.getBoundingClientRect();x.globalCompositeOperation="destination-out";x.beginPath();x.arc(p.clientX-rr.left,p.clientY-rr.top,34,0,7);x.fill();if(++scCount>70){c.style.opacity=0;$("#scratchHint").style.display="none";$("#scratchNext").classList.remove("hidden")}}c.onpointerdown=()=>down=true;c.onpointerup=()=>down=false;c.onpointerleave=()=>down=false;c.onpointermove=er;c.ontouchstart=e=>{down=true;er(e)};c.ontouchmove=er;c.ontouchend=()=>down=false}
 const letter=`Happy Birthday, Banashankari! 🎂🥳✨
 
-Another year of your life, and I’m so grateful that our paths crossed all those years ago.
+My Dear Friend ❤️,
 
-It has been years since we became friends, and even though life has taken us in different directions, some friendships never fade. I still remember our laughs, silly talks, school memories, and all those little moments that made our friendship special.
+Life may take us in different directions, but some friendships never truly fade. I still remember our laughs, silly talks, school memories, and all those little moments that made our friendship so special. No matter how much time passes or how busy life gets, those memories will always have a special place in my heart.
 
-I hope you get to meet your one true love, marry the most beautiful person, and build a beautiful life together. May you always have happiness, success, love and countless reasons to smile.
+On your special day, I just want to wish you a life full of happiness, success, love, and beautiful memories. I hope you achieve every dream you have and always have the courage to follow your heart. May you meet wonderful people who truly understand, respect, and support you, and may you always be surrounded by people who make you smile.
 
-Years may pass, but our friendship will always remain the same. No matter how much time goes by, you will always be one of the most special people in my life.
+I hope the future brings you countless reasons to be happy, exciting adventures to look forward to, and moments that make you feel proud of how far you've come. Never forget how special and wonderful you are.
 
-Always your friend,
-Sakshi 💕
+Years may pass, life may change, and we may not always be together like we used to be, but I hope our friendship always remains close to my heart. No matter where life takes us, I'll always be grateful for the memories we've shared.
+
+Keep smiling, keep shining, and keep being the amazing person you are. ✨
+
+Happy Birthday once again! 🎂❤️
+
+With lots of love and warm wishes,
+Your Friend, Sakshi 
 Happy Birthday once again! ✨`;
 let opened=false;function openLetter(){if(opened)return;opened=true;$("#envelope").classList.add("open");setTimeout(()=>{$("#envelope").classList.add("hidden");$("#letterHint").classList.add("hidden");$("#letterPaper").classList.remove("hidden");typeLetter()},900)}
 function typeLetter(){let i=0,e=$("#letterText"),t=setInterval(()=>{e.textContent+=letter[i++];e.parentElement.scrollTop=e.parentElement.scrollHeight;if(i>=letter.length){clearInterval(t);$("#finalNext").classList.remove("hidden")}},18)}
